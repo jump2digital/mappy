@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON, Popup } from "react-leaflet";
 import Data from "../assets/data.json";
+import PopupContent from "./PopupContent.jsx"
 
-function Neighbour() {
+
+
+
+function Neighbour(selectedFilter) {
     const [data, setData] = useState([]);
 
     useEffect
@@ -11,7 +15,7 @@ function Neighbour() {
         .then((response) => response.json())
         .then((data) => setData(data))
     }, []); 
-
+    
     return (
         <div>
             <MapContainer
@@ -34,7 +38,7 @@ function Neighbour() {
                             opacity: 0.5,
                         })}
                     >
-                        <Popup>{item.nomBarri}</Popup>
+                        <Popup ><PopupContent data={item} selectedFilter={selectedFilter} /></Popup>
                     </GeoJSON>
                 ))}
             </MapContainer>
