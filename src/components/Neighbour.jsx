@@ -10,7 +10,7 @@ function Neighbour() {
         fetch("https://jump2backend-edfad82cc29e.herokuapp.com/barrio/all")
         .then((response) => response.json())
         .then((data) => setData(data))
-    }, []);
+    }, []); 
 
     return (
         <div>
