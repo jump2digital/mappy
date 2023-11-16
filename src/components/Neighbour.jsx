@@ -16,7 +16,7 @@ function Neighbour() {
         <div>
             <MapContainer
                 center={[41.4069427924939, 2.18455661967592]}
-                zoom={15}
+                zoom={12}
                 style={{ height: "100vh", width: "100%" }}
             >
                 <TileLayer
@@ -34,7 +34,7 @@ function Neighbour() {
                             opacity: 0.5,
                         })}
                     >
-                        <Popup>{item.nomDistricte}</Popup>
+                        <Popup>{item.nomBarri}</Popup>
                     </GeoJSON>
                 ))}
             </MapContainer>
