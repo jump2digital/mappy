@@ -1,7 +1,17 @@
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON, Popup } from "react-leaflet";
 import Data from "../assets/data.json";
 
 function Neighbour() {
+    const [data, setData] = useState([]);
+
+    useEffect
+    ( () => {
+        fetch("https://jump2backend-edfad82cc29e.herokuapp.com/barrio/all")
+        .then((response) => response.json())
+        .then((data) => setData(data))
+    }, []); 
+
     return (
         <div>
             <MapContainer
@@ -13,7 +23,7 @@ function Neighbour() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                {Data.map((item) => (
+                {data.map((item) => (
                     <GeoJSON
                         key={item.uuid}
                         data={item.poligono}
