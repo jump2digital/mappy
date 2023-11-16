@@ -81,7 +81,7 @@ function Neighbour() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
             <Marker position={centerPointReverse}>
-                <Popup>Les Corts</Popup>
+                <Popup><div><p>Preu</p><p>Nom</p></div></Popup>
             </Marker>
             <GeoJSON
                 data={lesCortsGeoJSON}
