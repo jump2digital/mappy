@@ -4,7 +4,6 @@ import {filtersList} from '../models/filtersList';
 
 
 function Filters({handleFilter}) {
-    console.log(filtersList)
     return (
     <div className="z-[500] absolute top-5 right-5 p-2 w-52 rounded-lg bg-white ">
         <RadioGroup 

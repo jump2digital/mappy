@@ -7,7 +7,7 @@ import {NextUIProvider} from "@nextui-org/react";
 const App = () => {
   let [selectedFilter, setSelectedFilter] = useState(0);
   function handleFilter(index){
-    console.log(index)
+    console.log('Changed filter: '+ index)
     setSelectedFilter(index)
   }
   return (
