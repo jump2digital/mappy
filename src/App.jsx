@@ -12,7 +12,7 @@ const App = () => {
   }
   return (
     <NextUIProvider>
-      <Neighbour />
+      <Neighbour selectedFilter={selectedFilter} />
       <Filters handleFilter={handleFilter} />
     </NextUIProvider>
   )
