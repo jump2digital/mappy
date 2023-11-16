@@ -1,8 +1,13 @@
+import Filters from "./components/Filters"
 import Neighbour from "./components/Neighbour"
+import {NextUIProvider} from "@nextui-org/react";
 
 const App = () => {
   return (
-    <Neighbour />
+    <NextUIProvider>
+      <Neighbour />
+      <Filters />
+    </NextUIProvider>
   )
 }
 
