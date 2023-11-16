@@ -20,7 +20,6 @@ function Filters({ handleFilter }) {
     <RadioGroup
       onChange={(event) => handleFilter(event.target.value)}
       color="secondary"
-      defaultValue={0}
       className="font-bold py-2 px-3 text-lg"
       label={label}
     >

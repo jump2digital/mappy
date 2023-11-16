@@ -25,13 +25,13 @@ function PopupContent({ data, selectedFilter}) {
     let dataOfSelectedFilter;
     switch (indexFilter) {
         case "0":
-          
+            dataOfSelectedFilter = "Preu m2: " + data.preuM2 + " €";
           break;
         case "1":
-          
+        dataOfSelectedFilter = "Preu mitjà lloguer: " + data.preuMitja + " €";
           break;
         case "2":
-            dataOfSelectedFilter = formatedLocalList;
+        dataOfSelectedFilter = formatedLocalList;
           console.log(dataOfSelectedFilter)
           break;
         
