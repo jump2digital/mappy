@@ -1,8 +1,18 @@
 [
     {
         "uuid": "61122c0d-6312-40b6-8a61-aa8da2cd143e",
-        "nombre": "Prueba",
-        "distrito": "Sant Marti",
+        "nomBarri": "Prueba",
+        "nomDistricte": "Sant Marti",
+        "codiDistricte": "02",
+        "nAltres": 10,
+        "nAutomocio": 3,
+        "nEquipamentPersonal": 5,
+        "nLocalsBuits": 2,
+        "nOciCultura": 4,
+        "nParamentLlar": 3,
+        "nQuotidiaAlimentari": 2,
+        "nQuotidiaNoAlimentari": 5,
+        "nServeis": 3,
         "poligono": {
             "type": "Feature",
             "geometry": {
@@ -31,8 +41,18 @@
     },
     {
         "uuid": "3452e462c0d-6312-40b6-8a61-aa8da2cd143z",
-        "nombre": "Prueba Les Corts",
-        "distrito": "Les Corts",
+        "nomBarri": "Prueba Les Corts",
+        "nomDistricte": "Les Corts",
+        "codiDistricte": "03",
+        "nAltres": 8,
+        "nAutomocio": 5,
+        "nEquipamentPersonal": 33,
+        "nLocalsBuits": 10,
+        "nOciCultura": 30,
+        "nParamentLlar": 23,
+        "nQuotidiaAlimentari": 12,
+        "nQuotidiaNoAlimentari": 35,
+        "nServeis": 43,
         "poligono": {
             "type": "Feature",
             "geometry": {

@@ -24,7 +24,7 @@ function Neighbour() {
                             opacity: 0.5,
                         })}
                     >
-                        <Popup>{item.distrito}</Popup>
+                        <Popup>{item.nomDistricte}</Popup>
                     </GeoJSON>
                 ))}
             </MapContainer>
