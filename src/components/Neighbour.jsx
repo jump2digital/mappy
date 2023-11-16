@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON, Popup } from "react-leaflet";
-import Data from "../assets/data.json";
+import PopupContent from "./PopupContent.jsx"
+import { getNBuitsColor } from '../utils/getNBuitsColor.js'
 
-function Neighbour() {
+function Neighbour(selectedFilter) {
     const [data, setData] = useState([]);
 
     useEffect
@@ -10,8 +11,8 @@ function Neighbour() {
         fetch("https://jump2backend-edfad82cc29e.herokuapp.com/barrio/all")
         .then((response) => response.json())
         .then((data) => setData(data))
-    }, []); 
-
+    }, []);
+    
     return (
         <div>
             <MapContainer
@@ -28,13 +29,13 @@ function Neighbour() {
                         key={item.uuid}
                         data={item.poligono}
                         style={() => ({
-                            fillColor: "blue",
+                            fillColor: getNBuitsColor(item.nlocalBuit),
                             color: "red",
                             weight: 2,
                             opacity: 0.5,
                         })}
                     >
-                        <Popup>{item.nomBarri}</Popup>
+                        <Popup ><PopupContent data={item} selectedFilter={selectedFilter} /></Popup>
                     </GeoJSON>
                 ))}
             </MapContainer>
